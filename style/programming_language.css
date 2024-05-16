@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "RetroGaming";
+    src: url('/RetroGaming.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: "RetroGaming";
+    background: black;
+}
+
+.noise{
+    position: fixed;
+    inset: -200%;
+    z-index: -1;
+    background-image: url("../img/noise.png");
+    animation: shift 0.2s linear infinite both;
+    opacity: 40%;
+}
+
+.card-menu{
+    position: absolute;
+    width: 750px;
+    height: 500px;
+    left: 50%;
+    top: 50%; 
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.5;
+    background: rgb(185, 181, 181);
+    border: 2px solid white;
+    animation: move 5s;
+}
+
+.title-bar {
+    border-bottom: 2px solid white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes shift{
+    0%{
+        transform: translate(10%, 10%);
+    }
+    100%{
+        transform: translate(-10%, -10%);
+    }
+}
+
+.content-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content-menu img{
+    width: 100px;
+    background: rgb(185, 181, 181);
+
+}
+
+.content-menu ul{
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    flex-wrap: wrap;
+    background: rgb(185, 181, 181);
+}
+
+.content-menu ul li{
+    width: calc(33.33% - 20px);
+    margin: 10px; 
+    background: rgb(185, 181, 181);
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  
+
